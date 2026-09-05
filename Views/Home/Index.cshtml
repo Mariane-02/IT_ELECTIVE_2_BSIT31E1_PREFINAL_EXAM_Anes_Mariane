@@ -1,0 +1,38 @@
+@model List<ITELEC2.Models.Question>
+@{
+    ViewData["Title"] = "Answers";
+}
+
+<section class="intro">
+    <p>Multiple choice, 20 items. My answer for each item is shaded below, the way it would be shaded on the actual answer sheet.</p>
+</section>
+
+@foreach (var q in Model)
+{
+    <article class="question-card">
+        <div class="question-head">
+            <span class="q-number">@q.Number</span>
+            <span class="q-topic">@q.Topic</span>
+        </div>
+
+        <p class="q-text">@q.Text</p>
+
+        @if (!string.IsNullOrEmpty(q.CodeSnippet))
+        {
+            <pre class="q-code">@q.CodeSnippet</pre>
+        }
+
+        <ul class="choices">
+            @foreach (var choice in q.Choices)
+            {
+                var isAnswer = choice.Key == q.MyAnswer;
+                <li class="@(isAnswer ? "choice shaded" : "choice")">
+                    <span class="letter">@choice.Key</span>
+                    <span class="choice-text">@choice.Value</span>
+                </li>
+            }
+        </ul>
+
+        <p class="explanation"><strong>Answer: @q.MyAnswer.</strong> @q.Explanation</p>
+    </article>
+}

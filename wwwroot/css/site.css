@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #fafaf8;
+    color: #222;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.site-header {
+    border-bottom: 3px double #333;
+    padding: 28px 0 18px;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.subtitle {
+    margin: 4px 0 0;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.intro {
+    margin: 24px 0;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.question-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px 24px;
+    margin: 20px 0;
+}
+
+.question-head {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.q-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.q-topic {
+    color: #777;
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+.q-text {
+    font-size: 1.05rem;
+    margin: 6px 0 14px;
+}
+
+.q-code {
+    background: #f2f2ee;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 12px 14px;
+    font-family: Consolas, Menlo, monospace;
+    font-size: 0.85rem;
+    overflow-x: auto;
+    margin-bottom: 14px;
+}
+
+.choices {
+    list-style: none;
+    margin: 0 0 14px;
+    padding: 0;
+}
+
+.choice {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 5px 8px;
+    border-radius: 3px;
+}
+
+.choice .letter {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #999;
+    border-radius: 50%;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+
+.choice.shaded {
+    background: #333;
+    color: #fff;
+}
+
+.choice.shaded .letter {
+    background: #fff;
+    color: #333;
+    border-color: #fff;
+}
+
+.explanation {
+    font-size: 0.9rem;
+    color: #444;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    margin: 0;
+}
+
+.back-link {
+    display: inline-block;
+    margin: 20px 0 0;
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.site-footer {
+    margin-top: 40px;
+    border-top: 1px solid #ddd;
+    padding: 16px 0 30px;
+    color: #777;
+    font-size: 0.85rem;
+}

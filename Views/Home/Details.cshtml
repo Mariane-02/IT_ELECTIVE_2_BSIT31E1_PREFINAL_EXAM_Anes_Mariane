@@ -1,0 +1,33 @@
+@model ITELEC2.Models.Question
+@{
+    ViewData["Title"] = $"Item {Model.Number}";
+}
+
+<a class="back-link" href="/">&larr; Back to all items</a>
+
+<article class="question-card">
+    <div class="question-head">
+        <span class="q-number">@Model.Number</span>
+        <span class="q-topic">@Model.Topic</span>
+    </div>
+
+    <p class="q-text">@Model.Text</p>
+
+    @if (!string.IsNullOrEmpty(Model.CodeSnippet))
+    {
+        <pre class="q-code">@Model.CodeSnippet</pre>
+    }
+
+    <ul class="choices">
+        @foreach (var choice in Model.Choices)
+        {
+            var isAnswer = choice.Key == Model.MyAnswer;
+            <li class="@(isAnswer ? "choice shaded" : "choice")">
+                <span class="letter">@choice.Key</span>
+                <span class="choice-text">@choice.Value</span>
+            </li>
+        }
+    </ul>
+
+    <p class="explanation"><strong>Answer: @Model.MyAnswer.</strong> @Model.Explanation</p>
+</article>
