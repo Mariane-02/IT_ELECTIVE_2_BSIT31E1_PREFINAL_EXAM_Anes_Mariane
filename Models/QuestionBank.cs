@@ -81,6 +81,21 @@ namespace ITELEC2.Models
                     },
                     MyAnswer = "C",
                     Explanation = "The 'dotnet ef dbcontext scaffold' command reverse-engineers an existing database into entity classes and a DbContext, placed in the Models folder."
+                },
+                new Question
+                {
+                    Number = 6,
+                    Topic = "Conceptual Data Architecture",
+                    Text = "Where is a database connection string commonly stored in an ASP.NET Core MVC application?",
+                    Choices = new Dictionary<string, string>
+                    {
+                        {"A", "Program.cs only"},
+                        {"B", "appsettings.json"},
+                        {"C", "Index.cshtml"},
+                        {"D", "Student.cs"}
+                    },
+                    MyAnswer = "B",
+                    Explanation = "appsettings.json is the standard configuration file for connection strings, keeping them out of the code itself."
                 }
             };
         }
