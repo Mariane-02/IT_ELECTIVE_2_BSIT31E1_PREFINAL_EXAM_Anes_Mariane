@@ -263,6 +263,21 @@ namespace ITELEC2.Models
                     },
                     MyAnswer = "B",
                     Explanation = "try...catch lets the controller gracefully handle runtime errors instead of letting the whole application crash."
+                },
+                new Question
+                {
+                    Number = 18,
+                    Topic = "Introduction to SQL / CRUD",
+                    Text = "Which middleware is commonly used in ASP.NET Core for centralized exception handling?",
+                    Choices = new Dictionary<string, string>
+                    {
+                        {"A", "UseDatabase()"},
+                        {"B", "UseExceptionHandler()"},
+                        {"C", "UseValidationHandler()"},
+                        {"D", "UseMvcDatabase()"}
+                    },
+                    MyAnswer = "B",
+                    Explanation = "UseExceptionHandler() is the built-in ASP.NET Core middleware that catches unhandled exceptions app-wide and routes them to an error page."
                 }
             };
         }
