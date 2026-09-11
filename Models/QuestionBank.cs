@@ -172,6 +172,22 @@ namespace ITELEC2.Models
                     },
                     MyAnswer = "B",
                     Explanation = "A ViewModel tailors and combines exactly the fields a view needs, rather than exposing the full entity model directly."
+                },
+                new Question
+                {
+                    Number = 12,
+                    Topic = "Data Normalization & Structural Integrity",
+                    Text = "Consider this query. What is the main benefit of Include(s => s.Section)?",
+                    CodeSnippet = "var students = _context.Students.Include(s => s.Section).ToList();",
+                    Choices = new Dictionary<string, string>
+                    {
+                        {"A", "It loads the related Section navigation property"},
+                        {"B", "It creates a Section object manually"},
+                        {"C", "It removes the foreign key"},
+                        {"D", "It prevents the query from accessing the database"}
+                    },
+                    MyAnswer = "A",
+                    Explanation = "Same idea as question 10 - Include(s => s.Section) eagerly loads each Student's related Section so it isn't null."
                 }
             };
         }
