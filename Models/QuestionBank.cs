@@ -157,6 +157,21 @@ namespace ITELEC2.Models
                     },
                     MyAnswer = "B",
                     Explanation = "Include() performs eager loading, pulling in related entities (like Section) in the same query instead of leaving them null."
+                },
+                new Question
+                {
+                    Number = 11,
+                    Topic = "Data Normalization & Structural Integrity",
+                    Text = "Why might a ViewModel be used when displaying Student and Section information?",
+                    Choices = new Dictionary<string, string>
+                    {
+                        {"A", "To replace the database"},
+                        {"B", "To combine or shape the data specifically needed by the view"},
+                        {"C", "To automatically create database tables"},
+                        {"D", "To prevent controllers from using LINQ"}
+                    },
+                    MyAnswer = "B",
+                    Explanation = "A ViewModel tailors and combines exactly the fields a view needs, rather than exposing the full entity model directly."
                 }
             };
         }
