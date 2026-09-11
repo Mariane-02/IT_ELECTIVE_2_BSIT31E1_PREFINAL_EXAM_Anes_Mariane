@@ -203,6 +203,21 @@ namespace ITELEC2.Models
                     },
                     MyAnswer = "B",
                     Explanation = "Client-side validation runs in the browser (usually via JavaScript/jQuery unobtrusive validation) before the form is even submitted."
+                },
+                new Question
+                {
+                    Number = 14,
+                    Topic = "Data Validation and ModelState",
+                    Text = "Why is server-side validation still necessary if client-side validation exists?",
+                    Choices = new Dictionary<string, string>
+                    {
+                        {"A", "Client-side validation can be bypassed"},
+                        {"B", "Client-side validation automatically modifies the database"},
+                        {"C", "Server-side validation only works with SQLite"},
+                        {"D", "Client-side validation cannot display messages"}
+                    },
+                    MyAnswer = "A",
+                    Explanation = "A user can disable JavaScript or send requests directly (e.g. via an API tool), skipping client-side checks entirely, so the server must validate too."
                 }
             };
         }
