@@ -65,6 +65,22 @@ namespace ITELEC2.Models
                     },
                     MyAnswer = "A",
                     Explanation = "DbContext manages the connection and session with the database and exposes DbSet<T> properties for querying and saving data."
+                },
+                new Question
+                {
+                    Number = 5,
+                    Topic = "Model Binding and Controller Actions",
+                    Text = "What does the following command primarily do?",
+                    CodeSnippet = "dotnet ef dbcontext scaffold \"ConnectionString\" Microsoft.EntityFrameworkCore.SqlServer -o Models",
+                    Choices = new Dictionary<string, string>
+                    {
+                        {"A", "Deletes the database"},
+                        {"B", "Creates a new MVC project"},
+                        {"C", "Generates EF Core models and a DbContext from an existing database"},
+                        {"D", "Starts the MVC application"}
+                    },
+                    MyAnswer = "C",
+                    Explanation = "The 'dotnet ef dbcontext scaffold' command reverse-engineers an existing database into entity classes and a DbContext, placed in the Models folder."
                 }
             };
         }
