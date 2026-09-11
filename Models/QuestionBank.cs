@@ -188,6 +188,21 @@ namespace ITELEC2.Models
                     },
                     MyAnswer = "A",
                     Explanation = "Same idea as question 10 - Include(s => s.Section) eagerly loads each Student's related Section so it isn't null."
+                },
+                new Question
+                {
+                    Number = 13,
+                    Topic = "Data Validation and ModelState",
+                    Text = "Which type of validation occurs in the browser before a request is sent to the server?",
+                    Choices = new Dictionary<string, string>
+                    {
+                        {"A", "Database-level validation"},
+                        {"B", "Client-side validation"},
+                        {"C", "Server-side validation"},
+                        {"D", "EF Core migration validation"}
+                    },
+                    MyAnswer = "B",
+                    Explanation = "Client-side validation runs in the browser (usually via JavaScript/jQuery unobtrusive validation) before the form is even submitted."
                 }
             };
         }
