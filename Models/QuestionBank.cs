@@ -248,6 +248,21 @@ namespace ITELEC2.Models
                     },
                     MyAnswer = "A",
                     Explanation = "A database-level constraint is the last line of defense - it enforces uniqueness no matter how the data was inserted, even if app code has a bug."
+                },
+                new Question
+                {
+                    Number = 17,
+                    Topic = "Introduction to SQL / CRUD",
+                    Text = "What is the purpose of a try...catch block in a controller?",
+                    Choices = new Dictionary<string, string>
+                    {
+                        {"A", "To create navigation properties"},
+                        {"B", "To catch and handle exceptions that may occur during execution"},
+                        {"C", "To generate database tables"},
+                        {"D", "To perform client-side validation"}
+                    },
+                    MyAnswer = "B",
+                    Explanation = "try...catch lets the controller gracefully handle runtime errors instead of letting the whole application crash."
                 }
             };
         }
