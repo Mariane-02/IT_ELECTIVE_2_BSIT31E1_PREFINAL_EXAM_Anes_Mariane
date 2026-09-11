@@ -218,6 +218,21 @@ namespace ITELEC2.Models
                     },
                     MyAnswer = "A",
                     Explanation = "A user can disable JavaScript or send requests directly (e.g. via an API tool), skipping client-side checks entirely, so the server must validate too."
+                },
+                new Question
+                {
+                    Number = 15,
+                    Topic = "Data Validation and ModelState",
+                    Text = "A school requires every student to have a unique Student Number. Which rule best represents this requirement?",
+                    Choices = new Dictionary<string, string>
+                    {
+                        {"A", "Student Number should always be nullable"},
+                        {"B", "Student Number should be unique"},
+                        {"C", "Student Number should always be the same"},
+                        {"D", "Student Number should contain only spaces"}
+                    },
+                    MyAnswer = "B",
+                    Explanation = "The requirement directly describes a uniqueness constraint on the Student Number field."
                 }
             };
         }
