@@ -50,6 +50,21 @@ namespace ITELEC2.Models
                     },
                     MyAnswer = "C",
                     Explanation = "EF Core is an Object-Relational Mapper (ORM) - it maps C# classes and objects to tables and rows in a relational database."
+                },
+                new Question
+                {
+                    Number = 4,
+                    Topic = "Relational Data Modeling",
+                    Text = "Which EF Core component is primarily responsible for communicating with the database?",
+                    Choices = new Dictionary<string, string>
+                    {
+                        {"A", "DbContext"},
+                        {"B", "DbSetView"},
+                        {"C", "ControllerContext"},
+                        {"D", "RazorContext"}
+                    },
+                    MyAnswer = "A",
+                    Explanation = "DbContext manages the connection and session with the database and exposes DbSet<T> properties for querying and saving data."
                 }
             };
         }
