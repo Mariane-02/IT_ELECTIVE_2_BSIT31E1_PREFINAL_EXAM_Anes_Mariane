@@ -111,6 +111,22 @@ namespace ITELEC2.Models
                     },
                     MyAnswer = "B",
                     Explanation = "One Section relates to many Students, while each Student relates to only one Section - a classic One-to-Many relationship."
+                },
+                new Question
+                {
+                    Number = 8,
+                    Topic = "Conceptual Data Architecture",
+                    Text = "In the following example, what is SectionId?",
+                    CodeSnippet = "public int SectionId { get; set; }\npublic Section Section { get; set; }",
+                    Choices = new Dictionary<string, string>
+                    {
+                        {"A", "Primary key of Student"},
+                        {"B", "Foreign key referencing Section"},
+                        {"C", "Navigation property"},
+                        {"D", "Database connection string"}
+                    },
+                    MyAnswer = "B",
+                    Explanation = "SectionId stores the Id of the related Section row, making it a foreign key. The Section property below it is the navigation property."
                 }
             };
         }
