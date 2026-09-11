@@ -142,6 +142,21 @@ namespace ITELEC2.Models
                     },
                     MyAnswer = "B",
                     Explanation = "A navigation property lets you traverse from one entity to its related entity (or collection) directly in code, e.g. student.Section.Name."
+                },
+                new Question
+                {
+                    Number = 10,
+                    Topic = "Razor Syntax and Dynamic Rendering",
+                    Text = "What does .Include() generally allow EF Core to do?",
+                    Choices = new Dictionary<string, string>
+                    {
+                        {"A", "Delete the Section table"},
+                        {"B", "Load related Section data together with Students"},
+                        {"C", "Create a new Student"},
+                        {"D", "Validate Student input"}
+                    },
+                    MyAnswer = "B",
+                    Explanation = "Include() performs eager loading, pulling in related entities (like Section) in the same query instead of leaving them null."
                 }
             };
         }
