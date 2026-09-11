@@ -293,6 +293,21 @@ namespace ITELEC2.Models
                     },
                     MyAnswer = "B",
                     Explanation = "When a requested resource doesn't exist, the correct HTTP semantics are to return a 404 Not Found response."
+                },
+                new Question
+                {
+                    Number = 20,
+                    Topic = "Introduction to SQL / CRUD",
+                    Text = "A student already belongs to Section A for a particular subject. The application attempts to assign the same student to Section A again. What is the primary concern?",
+                    Choices = new Dictionary<string, string>
+                    {
+                        {"A", "Data integrity"},
+                        {"B", "HTML formatting"},
+                        {"C", "CSS inheritance"},
+                        {"D", "Razor syntax"}
+                    },
+                    MyAnswer = "A",
+                    Explanation = "Assigning a duplicate record risks inconsistent or redundant data - a data integrity concern, not a presentation issue."
                 }
             };
         }
