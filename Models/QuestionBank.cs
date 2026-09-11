@@ -96,6 +96,21 @@ namespace ITELEC2.Models
                     },
                     MyAnswer = "B",
                     Explanation = "appsettings.json is the standard configuration file for connection strings, keeping them out of the code itself."
+                },
+                new Question
+                {
+                    Number = 7,
+                    Topic = "Conceptual Data Architecture",
+                    Text = "A Student belongs to exactly one Section, while a Section can contain many students. What type of relationship is this?",
+                    Choices = new Dictionary<string, string>
+                    {
+                        {"A", "One-to-One"},
+                        {"B", "One-to-Many"},
+                        {"C", "Many-to-Many"},
+                        {"D", "Many-to-One only"}
+                    },
+                    MyAnswer = "B",
+                    Explanation = "One Section relates to many Students, while each Student relates to only one Section - a classic One-to-Many relationship."
                 }
             };
         }
