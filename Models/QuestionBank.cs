@@ -233,6 +233,21 @@ namespace ITELEC2.Models
                     },
                     MyAnswer = "B",
                     Explanation = "The requirement directly describes a uniqueness constraint on the Student Number field."
+                },
+                new Question
+                {
+                    Number = 16,
+                    Topic = "Introduction to SQL / CRUD",
+                    Text = "Which is the best reason for having a database-level unique constraint on StudentNumber?",
+                    Choices = new Dictionary<string, string>
+                    {
+                        {"A", "It protects data integrity even if application-level validation is bypassed"},
+                        {"B", "It makes Razor Views render faster"},
+                        {"C", "It removes the need for a Controller"},
+                        {"D", "It automatically creates a ViewModel"}
+                    },
+                    MyAnswer = "A",
+                    Explanation = "A database-level constraint is the last line of defense - it enforces uniqueness no matter how the data was inserted, even if app code has a bug."
                 }
             };
         }
