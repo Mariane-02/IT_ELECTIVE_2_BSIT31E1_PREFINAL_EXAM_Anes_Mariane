@@ -278,6 +278,21 @@ namespace ITELEC2.Models
                     },
                     MyAnswer = "B",
                     Explanation = "UseExceptionHandler() is the built-in ASP.NET Core middleware that catches unhandled exceptions app-wide and routes them to an error page."
+                },
+                new Question
+                {
+                    Number = 19,
+                    Topic = "Introduction to SQL / CRUD",
+                    Text = "A user requests /Student/999, but Student 999 does not exist. What would be the most appropriate response?",
+                    Choices = new Dictionary<string, string>
+                    {
+                        {"A", "Display the student's information anyway"},
+                        {"B", "Display a Not Found (404) response/page"},
+                        {"C", "Delete Student 999"},
+                        {"D", "Create Student 999 automatically"}
+                    },
+                    MyAnswer = "B",
+                    Explanation = "When a requested resource doesn't exist, the correct HTTP semantics are to return a 404 Not Found response."
                 }
             };
         }
