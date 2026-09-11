@@ -127,6 +127,21 @@ namespace ITELEC2.Models
                     },
                     MyAnswer = "B",
                     Explanation = "SectionId stores the Id of the related Section row, making it a foreign key. The Section property below it is the navigation property."
+                },
+                new Question
+                {
+                    Number = 9,
+                    Topic = "Razor Syntax and Dynamic Rendering",
+                    Text = "What is the purpose of a navigation property such as public Section Section { get; set; }?",
+                    Choices = new Dictionary<string, string>
+                    {
+                        {"A", "It stores the database password"},
+                        {"B", "It represents a relationship to another entity"},
+                        {"C", "It creates a new database"},
+                        {"D", "It validates the student's name"}
+                    },
+                    MyAnswer = "B",
+                    Explanation = "A navigation property lets you traverse from one entity to its related entity (or collection) directly in code, e.g. student.Section.Name."
                 }
             };
         }
