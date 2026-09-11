@@ -35,6 +35,21 @@ namespace ITELEC2.Models
                     },
                     MyAnswer = "B",
                     Explanation = "Database-First scaffolds C# model classes from a database that already exists, the reverse of Code-First."
+                },
+                new Question
+                {
+                    Number = 3,
+                    Topic = "Relational Data Modeling",
+                    Text = "What is the primary purpose of Entity Framework Core?",
+                    Choices = new Dictionary<string, string>
+                    {
+                        {"A", "To create HTML pages automatically"},
+                        {"B", "To replace the MVC Controller"},
+                        {"C", "To map objects in code to relational database data"},
+                        {"D", "To replace the C# compiler"}
+                    },
+                    MyAnswer = "C",
+                    Explanation = "EF Core is an Object-Relational Mapper (ORM) - it maps C# classes and objects to tables and rows in a relational database."
                 }
             };
         }
